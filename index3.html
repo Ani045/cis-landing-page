@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artemis Landing Page</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+ <!-- css links -->
+  <link rel="stylesheet" href="css/style.css" />
+<!-- font -awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar custom-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="asserts/icons/bp-logo.png" alt="Artemis Logo" height="45" />
+      </a>
+      <a href="#" class="appointment-btn" data-bs-toggle="modal" data-bs-target="#artemisHealthModal">
+        <i class="bi bi-calendar-check"></i> Appointment
+      </a>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="artemisHealthModal" tabindex="-1" aria-labelledby="artemisHealthModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header artemis-modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-4 py-3">
+          <h3 class="text-center artemis-olive-text fw-semibold mb-2">Get expert health advice now!</h3>
+          <p class="text-center artemis-olive-text mb-4">Drop your details, and our health specialists will guide you.</p>
+          <form action="https://app.formester.com/forms/m3MoISo04kVR/submissions" method="POST" id="enquiryForm">
+            <div class="artemis-form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Your name" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+            </div>
+            <div class="artemis-form-group">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" name="phone" placeholder="Your phone number" pattern="\d{10}" title="Phone number should be exactly 10 digits" required>
+            </div>
+            <div class="artemis-form-group">
+              <label class="form-label">Age</label>
+              <input type="number" class="form-control" name="Age" placeholder="Your Age" oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
+            </div>
+            <div class="artemis-form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" name="message" placeholder="Your message" required></textarea>
+            </div>
+            <div class="artemis-form-group">
+              <label class="form-label">City</label>
+              <input type="text" class="form-control" name="city" placeholder="Your city" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+            </div>
+            <button type="submit" class="artemis-submit-btn">Enquire Now</button>
+          </form>
+          <div class="text-center mt-3">
+            <p class="small text-muted">
+              By clicking, you agree to our <a href="#" class="artemis-policy-link">Privacy Policy</a>,
+              <a href="#" class="artemis-policy-link">Terms of Use</a> and <a href="#" class="artemis-policy-link">Disclaimer</a>
+            </p>
+            <p class="text-muted mt-3 mb-2">or</p>
+            <div class="d-flex flex-column align-items-center gap-2 mb-2">
+              <a href="https://wa.me/919599285476" class="artemis-contact-link">
+                <i class="bi bi-whatsapp me-2"></i> Whatsapp : +91-9599285476
+              </a>
+              <a href="mailto:contactus@artemishospitals.com" class="artemis-contact-link">
+                <i class="bi bi-envelope me-2"></i> Email : contactus@artemishospitals.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***************** -->
+
+     <!-- Hero Banner Section with Form -->
+     <section class="hero-section">
+        <div class="hero-shape"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Get <span>Advanced Cardiac Treatment in Gurgaon</span></h1>
+                    <p class="hero-subtitle">Expert Cardiovascular Care Starts Here! Get Comprehensive Heart Care from Leading Specialists </p>
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>24/7 Emergency Care</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>World-Class Specialists</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="form-container" id="form">
+                        <div class="form-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h3 class="form-title">Get Free Second Opinion</h3>
+                        
+                        <form action="https://app.formester.com/forms/m3MoISo04kVR/submissions" method="POST" id="enquiryForm">
+        <div class="artemis-form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Your name" 
+                   oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+             </div>
+        
+          <div class="artemis-form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-control" name="phone" placeholder="Your phone number" 
+                   pattern="\d{10}" title="Phone number should be exactly 10 digits" required>
+            <div class="error-message" id="phoneError"></div>
+        </div> 
+        
+        <div class="artemis-form-group">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-control" name="Age" placeholder="Your Age"
+              >
+            </div>
+    
+
+<!-- City Field -->
+<div class="artemis-form-group">
+    <label class="form-label">City</label>
+    <input type="text" class="form-control" name="city" placeholder="Your city" 
+           oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+</div>
+
+        <div class="artemis-form-group">
+    <label class="form-label">Message</label>
+    <textarea class="form-control" name="message" placeholder="Your message" required></textarea>
+</div>
+        
+        <button type="submit" class="artemis-submit-btn">Enquire Now</button>
+    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+
+    <div class="wrapper about-convicare-div-parent p-5">
+        <div class="about-convicare-div">
+            <h1>Welcome to Convicare</h1>
+      <p>
+        TruHealers Healthcare strives to offers the best international patient services in India at a fraction of the cost compared to Western Countries. With state-of-the-art hospitals and internationally accredited healthcare facilities, India is a preferred destination for medical travellers seeking affordable and effective treatments across various specialties, including cardiology, orthopedics, oncology, IVF ,neurosurgery ,kidney & liver transplant,BMT and cosmetic surgery. Our company serves as your trusted partner in navigating this vast healthcare landscape, ensuring personalized services, seamless coordination, and a hassle-free experience from consultation to recovery. We are committed to providing the best care, tailored to your specific needs, with a focus on safety, transparency, and patient satisfaction, so you can focus on healing with peace of mind.
+      </p>
+        </div>
+    </div>
+
+    <!-- why choose us section  -->
+
+    <div class="views-element-container mx-5">
+        <div
+          class="int-number-view section-empty js-view-dom-id-255f21e20c04314559b5729c3c034cbc22599101fbe4a03730d643b723eccdfd"
+        >
+          <div class="item-list">
+            <ul class="international-number-list">
+              <li>
+                <div class="icon">
+                  <img
+                    src="drupal-data/2023-05/Group%2022830%20%284%29.svg"
+                    alt="img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text-wrap">
+                  <div class="title">27</div>
+                  <div class="des">Hospitals across the Country</div>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img
+                    src="drupal-data/2023-05/Group%2022832%20%284%29.svg"
+                    alt="img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text-wrap">
+                  <div class="title">4,300+</div>
+                  <div class="des">Operational Beds</div>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img
+                    src="drupal-data/2023-05/Group%2022467%20%286%29.svg"
+                    alt="img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text-wrap">
+                  <div class="title">200,000+</div>
+                  <div class="des">
+                    International Patients Treated
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img
+                    src="drupal-data/2023-05/Group%2022897%20%285%29.svg"
+                    alt="img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text-wrap">
+                  <div class="title">175+</div>
+                  <div class="des">
+                    Countries covered across the globe
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="icon">
+                  <img
+                    src="drupal-data/2023-05/Group%2022475%20%285%29.svg"
+                    alt="img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text-wrap">
+                  <div class="title">20+</div>
+                  <div class="des">International Govt. Tie-ups</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p class="text-muted">TruHealers Healthcare is known for its commitment to providing high-quality, affordable healthcare and for its focus on patient-centric care</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h3 class="feature-title">World-Class Healthcare</h3>
+                            <p class="feature-text">Access to top hospitals and internationally accredited medical facilities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3 class="feature-title">Affordable Treatments</h3>
+                            <p class="feature-text">High-quality care at a fraction of the cost compared to Western countries.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-comment-medical"></i>
+                            </div>
+                            <h3 class="feature-title">Free Medical Advice</h3>
+                            <p class="feature-text">We offer free consultation with doctors to discuss your medical needs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="feature-title">Experienced Professionals</h3>
+                            <p class="feature-text">Skilled doctors with expertise in various medical specialties.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h3 class="feature-title">Personalized Care</h3>
+                            <p class="feature-text">Tailored treatment plans to meet your unique health needs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3 class="feature-title">Seamless Experience</h3>
+                            <p class="feature-text">End-to-end support from consultation to recovery, with easy coordination.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="feature-title">Patient-Centered</h3>
+                            <p class="feature-text">Focus on safety, transparency, and patient satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="feature-title">Trusted Partner</h3>
+                            <p class="feature-text">We ensure hassle-free healthcare, so you can focus on healing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary btn-lg">Get Your Free Consultation Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq -->
+
+    <div class="int-faqs">
+        <div class="views-element-container">
+          <div
+            class="faq-outer section-empty js-view-dom-id-813fc951f8a1d6a858eff298d52b3d92567ef8e9b4b5d5a21c9e0670a3c651c3"
+          >
+            <header>
+              <div class="head-row">
+                <h3 class="heading2">FAQ's</h3>
+                
+              </div>
+            </header>
+
+            <div class="item-list">
+              <ul class="faq-sec">
+                  
+                  <li>
+                    <h4 class="faq-title">How can I get a visa for medical treatment in India?</h4>
+                    <div class="faq-content">
+                      <p>Once you confirm your treatment with us, we will provide a visa requisition letter to facilitate your visa application. Please provide your details via email to start the process.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">What languages do your interpreters speak?</h4>
+                    <div class="faq-content">
+                      <p>Our interpreters are fluent in multiple languages including Arabic, French, Russian, and more, to ensure effective communication throughout your stay.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">Can Convicare help with accommodations for my family?</h4>
+                    <div class="faq-content">
+                      <p>Yes, we can arrange accommodations for your family or attendants according to your preferences, from budget options to luxury hotels.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">What should I bring with me for my treatment at Convicare?</h4>
+                    <div class="faq-content">
+                      <p>Please bring all relevant medical documents, a valid passport, visa, travel insurance information, and personal items for your stay. Also, bring any medications you are currently taking.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">How is the post-discharge process managed for international patients?</h4>
+                    <div class="faq-content">
+                      <p>Post-discharge, we assist with travel arrangements, provide tele-consultation services, and can organize a stay for recuperation in India, along with sightseeing if you are interested.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">What payment methods does Convicare accept for international patients?</h4>
+                    <div class="faq-content">
+                      <p>ConviCare accepts various payment methods including wire transfers, major credit cards (VISA, MasterCard, AMEX), and direct payments at the hospital. We can also accommodate payments in multiple currencies.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">Are there any cultural or religious accommodations available at Convicare?</h4>
+                    <div class="faq-content">
+                      <p>Yes, we respect the diverse backgrounds of our international patients. Convicare provides various cultural and religious accommodations, including halal meals, spaces for prayer, and language-appropriate religious materials.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">Can Convicare arrange medical consultations or treatments that are not listed on the website?</h4>
+                    <div class="faq-content">
+                      <p>Absolutely. If you have specific medical needs, please discuss them with your international patient coordinator. We have a wide network of specialists across various disciplines and can arrange for specialized consultations and treatments as required.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">How does Convicare ensure privacy and confidentiality for its international patients?</h4>
+                    <div class="faq-content">
+                      <p>We adhere strictly to patient confidentiality and privacy laws. All medical records, discussions, and treatments are handled with the utmost discretion and security.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">What should I do if there is an emergency situation during my stay?</h4>
+                    <div class="faq-content">
+                      <p>ConviCare provides 24/7 emergency care. In case of an emergency, you can contact the hospital’s main line or speak directly to your international patient coordinator who will ensure rapid response and care.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">How long do I need to stay in India after my treatment for follow-up care?</h4>
+                    <div class="faq-content">
+                      <p>The duration of stay post-treatment varies depending on the type of procedure and your recovery rate. Your doctor and international patient coordinator will provide a recommended timeline based on your specific treatment plan.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">Can Convicare help with extending my medical visa if needed?</h4>
+                    <div class="faq-content">
+                      <p>Yes, our dedicated visa assistance team can help with the necessary documentation and procedures to apply for an extension of your medical visa if your treatment requires a longer stay.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">Does Convicare provide support for rehabilitation services post-treatment?</h4>
+                    <div class="faq-content">
+                      <p>Yes, we offer comprehensive rehabilitation services including physical therapy, occupational therapy, and other specialized rehabilitation services tailored to your recovery needs.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">Are there facilities for online consultations with doctors after I return to my country?</h4>
+                    <div class="faq-content">
+                      <p>ConviCare offers tele-consultation services enabling you to continue your follow-up appointments with your treating doctors from the comfort of your home country.</p>
+                    </div>
+                  </li>
+                  
+                  <li>
+                    <h4 class="faq-title">What amenities are available for attendants staying with the patient?</h4>
+                    <div class="faq-content">
+                      <p>Attendants can enjoy amenities such as comfortable lounge areas, cafeteria services, Wi-Fi, and accommodation assistance. We ensure that attendants are comfortable and well taken care of during their stay.</p>
+                    </div>
+                  </li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $("#sortable").sortable();
+      $("#sortable").disableSelection();
+    });
+  </script>
+</body>
+</html>
