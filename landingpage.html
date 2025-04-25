@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis Landing Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <style>
+          :root {
+            --primary-color: #4eb8dd;
+            --secondary-color: #a1d9f5;
+            --accent-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --dark-bg: #4eb8dd;
+            --card-border: #cfe8f7;
+            --hover-color: #e8f7fd;
+            --primary-dark: #004f80;
+            --icon-color: #004f80;
+            --heading-color: #ffffff;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+        }
+
+        /* ++++++++++++++++++++++++++++++ */
+
+        .navbar-custom {
+            background-color: #C6E8FA;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-custom img {
+            height: 40px;
+        }
+
+        .appointment-btn {
+            background-color: #fff;
+            color: #005388;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border:2px solid #005388;
+        }
+
+        .appointment-btn:hover {
+            /* background-color: var(--text-color); */
+            background-color: #005388;
+            color: #fff;
+        }
+
+
+        /* *************************** */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background: url('asserts/images/slider01.webp') no-repeat center center/cover;
+        }
+
+        .hero-text {
+            flex: 1 1 50%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-text .stats {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .hero-form {
+            flex: 1 1 50%;
+            max-width: 500px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-form h4 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .form-control,
+        .form-select {
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .submit-btn {
+            background-color: #005388;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600;
+            color: white;
+            width: 100%;
+        }
+
+        .int-faqs {
+            background: linear-gradient(to top left, #f5fbfe, #ffffff);
+            padding: 60px 20px;
+        }
+
+        .views-element-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-sec {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .faq-sec li {
+            background-color: #ffffff;
+            border: 1px solid #e3e6ea;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            padding: 1.25rem;
+            cursor: move;
+        }
+
+        .faq-sec li:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 20px rgba(78, 184, 221, 0.15);
+        }
+
+        .faq-title {
+            font-weight: 600;
+            color: #005388;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-content {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .heading2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* 
+    .hero-text .rating p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.rating_cnt span {
+  font-weight: 600;
+  margin-right: 5px;
+  font-size: 1rem;
+} */
+
+
+        /* modal */
+
+        .artemis-submit-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .artemis-submit-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* )))))))))))))))))) */
+
+        .th-assistance-btn-red {
+    background-color: #004f80;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .th-assistance-btn-red:hover {
+    background-color: #eaf4fb;
+    color: #004f80;
+    border: 1px solid #004f80;
+  }
+
+  .th-assistance-btn-green {
+    background-color: #eaf4fb;
+    color: #004f80;
+    border: 1px solid #004f80;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .th-assistance-btn-green:hover {
+    background-color: #004f80;
+    color: #fff;
+  }
+
+        /* ********************************* */
+        #hospital-network-section {
+            padding: 60px 0;
+        }
+
+        .hospital-country-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hospital-country-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .hospital-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #dee2e6;
+        }
+
+        .hospital-flag {
+            width: 24px;
+            height: auto;
+        }
+
+        .hospital-name {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            color: #333;
+        }
+
+        .hospital-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* section  */
+
+        .quote-card {
+            background-color: #eaf4fb;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s ease;
+            height: 100%;
+        }
+
+        .quote-card:hover {
+            background-color: #dceef8;
+        }
+
+        .quote-icon {
+            background-color: #dee9f3;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #0077b6;
+        }
+
+        .quote-title {
+            font-weight: bold;
+            color: #004f80;
+            margin: 0;
+        }
+
+        .quote-price {
+            font-weight: 600;
+        }
+
+        .get-quote {
+            color: #d62828;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .quote-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .quote-footer p {
+            margin-bottom: 10px;
+        }
+
+        .quote-footer .btn {
+            width: 140px;
+        }
+
+        /* faq2 */
+        .faq-section {
+            padding: 40px 20px;
+        }
+
+        .faq-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            color: #005388;
+            border: 1px solid #005388;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #fff;
+            background-color: #005388;
+            border: 1px solid #005388;
+        }
+
+        .accordion-button:after {
+            content: '+';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #005388;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            content: '-';
+            color: #fff;
+        }
+
+        .accordion-item {
+            border: none;
+        }
+
+        .accordion-button::after {
+            background-image: none !important;
+            /* Removes Bootstrap's default caret arrow */
+        }
+
+        /* para */
+
+        .para-color{
+        color:#005388;
+
+        }
+
+        /* after hero section  */
+
+        .metric-box {
+  background-color: var(--accent-color);
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  padding: 1rem;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.icon-box.purple { background-color: #d3d0f3; color: #4e3eb8; }
+.icon-box.green { background-color: #d0f3e0; color: #2c7a4b; }
+.icon-box.yellow { background-color: #fffacc; color: #a78900; }
+.icon-box.blue { background-color: #cce9f6; color: #007aa3; }
+.icon-box.red { background-color: #fbd6d6; color: #d9534f; }
+
+.metric-value {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+
+/* why choose us  */
+     /* .truhealers-section {
+            padding: 70px 0;
+            background-color: #f0f8ff;
+            position: relative;
+        }
+
+        .truhealers-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(161, 217, 245, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(30%, -30%);
+        }
+
+        .truhealers-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(161, 217, 245, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-30%, 30%);
+        }
+
+        .truhealers-heading {
+            color: var(--heading-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2.3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .truhealers-heading-wrapper {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .truhealers-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .truhealers-subtitle {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .truhealers-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px 25px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--card-border);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .truhealers-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary-dark);
+            transition: height 0.3s ease;
+        }
+
+        .truhealers-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            background-color: var(--hover-color);
+        }
+
+        .truhealers-card:hover::before {
+            height: 100%;
+        }
+
+        .truhealers-icon {
+            font-size: 2.2rem;
+            color: var(--icon-color);
+            margin-bottom: 18px;
+            transition: all 0.3s ease;
+            background-color: rgba(161, 217, 245, 0.2);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .truhealers-card:hover .truhealers-icon {
+            transform: scale(1.1);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .truhealers-title {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .truhealers-card:hover .truhealers-title {
+            color: var(--primary-dark);
+        }
+
+        .truhealers-content {
+            color: var(--text-color);
+            opacity: 0.9;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .truhealers-row {
+            margin-top: 20px;
+            row-gap: 30px;
+        } */
+
+
+        /* _________________ */
+
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.th-treatment-about {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+.th-treatment-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.th-treatment-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.th-treatment-content {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.th-treatment-emphasis {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* .th-treatment-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 35px;
+} */
+
+.th-treatment-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 25px;
+}
+
+.th-treatment-btn:hover {
+    color: white;
+    background-color: #3a9cc5;
+}
+
+
+/* +++++++++++++ */
+.truhealers-section {
+            padding: 25px 0;
+            background-color: var(--dark-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .truhealers-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(161, 217, 245, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(30%, -30%);
+        }
+
+        .truhealers-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(161, 217, 245, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-30%, 30%);
+        }
+
+        .truhealers-heading {
+            color: var( --primary-dark);
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .truhealers-heading-wrapper {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .truhealers-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .truhealers-subtitle {
+            max-width: 800px;
+            margin: 0 auto 15px;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .truhealers-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--card-border);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .truhealers-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary-dark);
+            transition: height 0.3s ease;
+        }
+
+        .truhealers-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            background-color: var(--hover-color);
+        }
+
+        .truhealers-card:hover::before {
+            height: 100%;
+        }
+
+        .truhealers-icon {
+            font-size: 1.5rem;
+            color: var(--icon-color);
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            background-color: rgba(161, 217, 245, 0.2);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .truhealers-card:hover .truhealers-icon {
+            transform: scale(1.1);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .truhealers-title {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .truhealers-card:hover .truhealers-title {
+            color: var(--primary-color);
+        }
+
+        .truhealers-content {
+            color: var(--text-color);
+            opacity: 0.9;
+            font-size: 0.85rem;
+            line-height: 1.3;
+            margin-bottom: 0;
+        }
+
+        .truhealers-row {
+            margin-top: 10px;
+            row-gap: 15px;
+        }
+
+
+        /* CTA Section */
+
+        
+        .tru-cta-section {
+            background-color: var(--primary-color);
+            padding: 60px 0;
+            /* border-radius: 16px; */
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        .tru-cta-pattern {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .tru-cta-circle {
+            position: absolute;
+            right: -150px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .tru-cta-circle-1 {
+            width: 400px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .tru-cta-circle-2 {
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.15);
+            right: -100px;
+        }
+
+        .tru-cta-circle-3 {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.2);
+            right: -50px;
+        }
+
+        .tru-cta-circle-4 {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.25);
+            right: 0;
+        }
+
+        .tru-cta-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+
+        .tru-cta-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .tru-cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .tru-cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tru-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #000;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .tru-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .tru-cta-btn-secondary {
+            background-color: var(--primary-dark);
+        }
+
+        .tru-cta-btn-secondary:hover {
+            background-color: #003a61;
+        }
+
+        .tru-cta-btn-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .tru-cta-btn:hover .tru-cta-btn-icon {
+            transform: translateX(3px);
+        }
+
+        .tru-cta-btn-icon i {
+            color: #000;
+            font-size: 12px;
+        }
+
+        .tru-cta-btn-secondary .tru-cta-btn-icon i {
+            color: var(--primary-dark);
+        }
+
+        .tru-cta-btn-secondary:hover .tru-cta-btn-icon i {
+            color: #003a61;
+        }
+
+        @media (max-width: 768px) {
+            .tru-cta-title {
+                font-size: 2.2rem;
+            }
+
+            .tru-cta-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .tru-cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+
+        /* ________________________ */
+
+        /* Metrics/Stats styling for hero section */
+.hospital-metrics {
+  padding: 0 !important;
+  margin: 20px 0;
+}
+
+.hospital-metrics .container {
+  padding: 0;
+}
+
+.hero-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.hero-stat-item {
+  width: 33.333%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.metric-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.metric-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.icon-box i {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.purple {
+  background-color: #8e44ad;
+}
+
+.green {
+  background-color: #27ae60;
+}
+
+.yellow {
+  background-color: #f39c12;
+}
+
+.metric-value {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #004f80;
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #2c3e50;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hospital-metrics {
+    margin: 25px 0;
+  }
+  
+  .hero-stat-item {
+    width: 33.333%;
+  }
+  
+  .hero-stats-row {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-stats-row {
+    justify-content: center;
+  }
+  
+  .hero-stat-item {
+    width: 50%;
+  }
+  
+  .metric-box {
+    padding: 12px 8px;
+  }
+  
+  .metric-value {
+    font-size: 1.2rem;
+  }
+  
+  .metric-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-stat-item {
+    width: 100%;
+    max-width: 160px;
+  }
+  
+  .icon-box {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon-box i {
+    font-size: 1.1rem;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-custom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="asserts/icons/bp-logo.png" alt="Artemis Logo" height="45" />
+            </a>
+            <a href="#" class="appointment-btn" data-bs-toggle="modal" data-bs-target="#artemisHealthModal">
+                <i class="bi bi-calendar-check"></i> Appointment
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="modal fade" id="artemisHealthModal" tabindex="-1" aria-labelledby="artemisHealthModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header artemis-modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-3">
+                    <h3 class="text-center artemis-olive-text fw-semibold mb-2">Get expert health advice now!</h3>
+                    <p class="text-center artemis-olive-text mb-4">Drop your details, and our health specialists will
+                        guide you.</p>
+                        
+                    <form action="https://app.formester.com/forms/m3MoISo04kVR/submissions" method="POST"
+                        id="enquiryForm">
+                        <div class="artemis-form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Your name"
+                                oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+                        </div>
+                        <div class="artemis-form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" name="phone" placeholder="Your phone number"
+                                pattern="\d{10}" title="Phone number should be exactly 10 digits" required>
+                        </div>
+                        <div class="artemis-form-group">
+                            <label class="form-label">Age</label>
+                            <input type="number" class="form-control" name="Age" placeholder="Your Age"
+                                oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
+                        </div>
+                        <div class="artemis-form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" name="message" placeholder="Your message"
+                                required></textarea>
+                        </div>
+                        <div class="artemis-form-group">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" name="city" placeholder="Your city"
+                                oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" required>
+                        </div>
+                        <button type="submit" class="artemis-submit-btn">Enquire Now</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="small text-muted">
+                            By clicking, you agree to our <a href="#" class="artemis-policy-link">Privacy Policy</a>,
+                            <a href="#" class="artemis-policy-link">Terms of Use</a> and <a href="#"
+                                class="artemis-policy-link">Disclaimer</a>
+                        </p>
+                        <p class="text-muted mt-3 mb-2">or</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mb-2">
+                            <a href="https://wa.me/919599285476" class="artemis-contact-link">
+                                <i class="bi bi-whatsapp me-2"></i> Whatsapp : +91-9599285476
+                            </a>
+                            <a href="mailto:contactus@artemishospitals.com" class="artemis-contact-link">
+                                <i class="bi bi-envelope me-2"></i> Email : contactus@artemishospitals.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="navbar-custom">
+        <img src="assets/images/logo.png" alt="Logo">
+        <a href="#" class="appointment-btn">Get a FREE quote</a>
+          </div> -->
+  <section class="hero-section">
+
+    <div class="hero-text text-center text-sm-start">
+        <h1>Medical Treatment With <br> Unmatched Personal Care</h1>
+        <p>World's Most Trusted Medical Travel Assistance Platform</p>
+
+         First row of metrics (above banner)
+        <div class="hospital-metrics">
+            <div class="hero-stats-row">
+                <div class="hero-stat-item">
+                    <div class="metric-box">
+                        <div class="icon-box purple">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5 class="metric-value">27</h5>
+                        <p class="metric-label">Hospitals across the Country</p>
+                    </div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="metric-box">
+                        <div class="icon-box green">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <h5 class="metric-value">4,300+</h5>
+                        <p class="metric-label">Operational Beds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="rating mt-2">
+            <figure class="mb-2">
+                <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/banner-rating.webp" width="274"
+                    height="75" alt="Patients Assisted" class="img-fluid" title="Patients Assisted Banner">
+            </figure>
+            <p><strong>1,00,000+</strong> Patients Assisted Since 2016</p>
+
+            <div class="d-flex justify-content-center justify-content-sm-start rating_cnt align-items-center mt-2">
+                <div class="google-rating d-flex align-items-center">
+                    <figure class="m-0 me-2">
+                        <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/google-icon.webp"
+                            width="20" alt="Google Icon">
+                    </figure>
+                    <div class="info">
+                        <div class="icons d-flex align-items-center">
+                            <span>4.7</span>
+                            <div class="ms-2 d-flex">
+                                <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/doctor_detail/v1/img/full_star.webp"
+                                    width="13" height="13" alt="Star">
+                                <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/doctor_detail/v1/img/full_star.webp"
+                                    width="13" height="13" alt="Star">
+                                <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/doctor_detail/v1/img/full_star.webp"
+                                    width="13" height="13" alt="Star">
+                                <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/doctor_detail/v1/img/full_star.webp"
+                                    width="13" height="13" alt="Star">
+                                <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/doctor_detail/v1/img/full_star.webp"
+                                    width="13" height="13" alt="Star">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second row of metrics (below banner) -->
+        <div class="hospital-metrics">
+            <div class="hero-stats-row">
+                <div class="hero-stat-item">
+                    <div class="metric-box">
+                        <div class="icon-box yellow">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h5 class="metric-value">200,000+</h5>
+                        <p class="metric-label">International Patients Treated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="hero-form">
+            <h4>Let Us Help You</h4>
+            <form>
+                <input type="text" class="form-control" placeholder="Patient Name">
+                <input type="email" class="form-control" placeholder="Enter email">
+                <select class="form-select">
+                    <option selected>India</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                </select>
+                <input type="text" class="form-control" placeholder="Select City">
+                <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input type="text" class="form-control" placeholder="Your Phone number">
+                </div>
+                <textarea class="form-control" placeholder="Describe The Current Medical Problem .."></textarea>
+                <input type="text" class="form-control" placeholder="Example: 30 Yrs or 29-05-1985">
+                <button type="submit" class="submit-btn">Get FREE Quote</button>
+                <p class="text-center mt-2" style="font-size: 0.8rem;">By submitting the form I agree to the <a
+                        href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> of TruHealers.</p>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- section 3  -->
+
+    <section class="hospital-metrics py-5">
+        <div class="container">
+          <div class="row g-4 justify-content-center text-center">
+            <div class="col-6 col-md-2">
+              <div class="metric-box">
+                <div class="icon-box purple">
+                  <i class="fas fa-star"></i>
+                </div>
+                <h5 class="metric-value">27</h5>
+                <p class="metric-label">Hospitals across the Country</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2">
+              <div class="metric-box">
+                <div class="icon-box green">
+                  <i class="fas fa-procedures"></i>
+                </div>
+                <h5 class="metric-value">4,300+</h5>
+                <p class="metric-label">Operational Beds</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2">
+              <div class="metric-box">
+                <div class="icon-box yellow">
+                  <i class="fas fa-user-plus"></i>
+                </div>
+                <h5 class="metric-value">200,000+</h5>
+                <p class="metric-label">International Patients Treated</p>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- para -->
+
+      <section class="th-treatment-about" >
+        <div class="container">
+            <div class="th-treatment-container">
+                <h2 class="th-treatment-title">World Class Treatment at Lowest Cost</h2>
+                <div class="th-treatment-content">
+                    <p>
+                        TruHealers Healthcare strives to 
+                        <span class="th-treatment-emphasis">offers the best international patient services</span> 
+                        in India at a fraction of the cost compared to Western Countries. With state-of-the-art hospitals and internationally accredited healthcare facilities, India is a preferred destination for medical travellers seeking affordable and effective treatments across various specialties, including cardiology, orthopedics, oncology, IVF, neurosurgery, kidney & liver transplant, BMT and cosmetic surgery. Our company serves as your trusted partner in navigating this vast healthcare landscape, ensuring personalized services, seamless coordination, and a hassle-free experience from consultation to recovery. We are committed to providing the best care, tailored to your specific needs, with a focus on safety, transparency, and patient satisfaction, so you can focus on healing with peace of mind.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="th-treatment-btn" >Book a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+      
+<!-- why choose us -->
+
+<section class="truhealers-section">
+    <div class="container">
+        <div class="truhealers-heading-wrapper">
+            <h2 class="truhealers-heading">Why Chose Us</h2>
+        </div>
+        
+        <p class="truhealers-subtitle">TruHealers Healthcare is known for its commitment to providing high-quality, affordable healthcare and for its focus on patient-centric care</p>
+        
+        <div class="row truhealers-row g-3">
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h5 class="truhealers-title">World-Class Healthcare</h5>
+                    <p class="truhealers-content">Access to top hospitals and internationally accredited medical facilities.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h5 class="truhealers-title">Affordable Treatments</h5>
+                    <p class="truhealers-content">High-quality care at a fraction of the cost compared to Western countries.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-comments-dollar"></i>
+                    </div>
+                    <h5 class="truhealers-title">Free Medical Advice and Quote</h5>
+                    <p class="truhealers-content">We offer free consultation with doctor for your healthcare needs.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h5 class="truhealers-title">Experienced Medical Professionals</h5>
+                    <p class="truhealers-content">Skilled doctors with expertise in various specialties.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h5 class="truhealers-title">Personalized Care</h5>
+                    <p class="truhealers-content">Tailored treatment plans to meet your unique needs.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h5 class="truhealers-title">Seamless Experience</h5>
+                    <p class="truhealers-content">End-to-end support from consultation to recovery, with easy coordination.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h5 class="truhealers-title">Patient-Centered Approach</h5>
+                    <p class="truhealers-content">Focus on safety, transparency, and patient satisfaction.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5 class="truhealers-title">Trusted Partner</h5>
+                    <p class="truhealers-content">We ensure hassle-free healthcare, so you can focus on healing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  -->
+<!-- 
+    <section class="py-5" style="background-color: #eaf6fb;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Multi-Specialty Focus</h2>
+                <p class="text-muted">We cover all medical needs, from hair transplants to heart transplants.</p>
+            </div>
+            <div class="row g-4">
+           
+
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                        <div class="d-flex align-items-start">
+
+                        
+                            <i class="fas fa-hand-holding-heart me-3" style="color: #004f80; font-size: 40px;"></i>
+
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: #004f80;">Oncology
+                               
+                                </h5>
+                                <p class="text-muted mb-0">Advanced cancer treatments with proven results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                        <div class="d-flex align-items-start">
+
+                          
+                            <i class="fas fa-hand-holding-heart me-3" style="color: #004f80; font-size: 40px;"></i>
+
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: #004f80;">Oncology
+                                  
+                                </h5>
+                                <p class="text-muted mb-0">Advanced cancer treatments with proven results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                        <div class="d-flex align-items-start">
+
+                         
+                            <i class="fas fa-hand-holding-heart me-3" style="color: #004f80; font-size: 40px;"></i>
+
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: #004f80;">Oncology
+                                    
+                                </h5>
+                                <p class="text-muted mb-0">Advanced cancer treatments with proven results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                        <div class="d-flex align-items-start">
+
+                            <i class="fas fa-hand-holding-heart me-3" style="color: #004f80; font-size: 40px;"></i>
+
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: #004f80;">Oncology
+                                
+                                </h5>
+                                <p class="text-muted mb-0">Advanced cancer treatments with proven results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                        <div class="d-flex align-items-start">
+
+                            
+                            <i class="fas fa-hand-holding-heart me-3" style="color: #004f80; font-size: 40px;"></i>
+
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: #004f80;">Oncology
+                                   
+                                </h5>
+                                <p class="text-muted mb-0">Advanced cancer treatments with proven results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                        <div class="d-flex align-items-start">
+
+                   
+                            <i class="fas fa-hand-holding-heart me-3" style="color: #004f80; font-size: 40px;"></i>
+
+                            <div>
+                                <h5 class="fw-bold mb-1" style="color: #004f80;">Oncology
+                               
+                                </h5>
+                                <p class="text-muted mb-0">Advanced cancer treatments with proven results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+               
+               
+
+
+                <div class="th-assistance-buttons text-center mt-4">
+                    <button type="button" class="btn th-assistance-btn-red me-2">
+                      Need Assistance?
+                    </button>
+                    <a href="https://wa.me/XXXXXXXXXX" target="_blank" class="btn th-assistance-btn-green">
+                      <i class="fab fa-whatsapp me-1"></i> Chat
+                    </a>
+                  </div>
+
+            
+
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+    <section id="hospital-network-section">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-2">Network of Top Hospitals</h2>
+            <p class="text-center text-muted mb-5">
+                We rigorously vet hospitals before adding to our panel, ensuring you receive the best care.
+                We have in-depth knowledge of hospitals in every country we operate in.
+            </p>
+
+            <div class="row g-4">
+                <!-- India -->
+                <div class="col-md-4" id="hospital-country-india">
+                    <div class="hospital-country-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="hospital-title">India</span>
+                            <img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="hospital-flag">
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-6" id="hospital-india-medanta">
+                                <img src="asserts/images/img1.png" alt="Medanta" class="hospital-img">
+                                <p class="hospital-name">Medanta, Gurgaon</p>
+                            </div>
+                            <div class="col-6" id="hospital-india-apollo">
+                                <img src="asserts/images/img3.png" alt="Apollo" class="hospital-img">
+                                <p class="hospital-name">Indraprastha Apollo, New Delhi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turkey -->
+                <div class="col-md-4" id="hospital-country-turkey">
+                    <div class="hospital-country-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="hospital-title">Turkey</span>
+                            <img src="https://flagcdn.com/w40/tr.png" alt="Turkey Flag" class="hospital-flag">
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-6" id="hospital-turkey-medicalpark">
+                                <img src="asserts/images/img4.webp" alt="Medical Park" class="hospital-img">
+                                <p class="hospital-name">Medical Park, Istanbul</p>
+                            </div>
+                            <div class="col-6" id="hospital-turkey-memorial">
+                                <img src="asserts/images/img5.png" alt="Memorial" class="hospital-img">
+                                <p class="hospital-name">Memorial Hospitals, Istanbul</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UAE -->
+                <div class="col-md-4" id="hospital-country-uae">
+                    <div class="hospital-country-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="hospital-title">UAE</span>
+                            <img src="https://flagcdn.com/w40/ae.png" alt="UAE Flag" class="hospital-flag">
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-6" id="hospital-uae-burjeel">
+                                <img src="asserts/images/img1.png" alt="Burjeel" class="hospital-img">
+                                <p class="hospital-name">Burjeel, Abu Dhabi</p>
+                            </div>
+                            <div class="col-6" id="hospital-uae-saudigerman">
+                                <img src="asserts/images/img2.png" alt="Saudi German" class="hospital-img">
+                                <p class="hospital-name">Saudi German, Dubai</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- section  -->
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-2"> International Patient Services
+            </h2>
+            <p class="para-color text-center px-12 mb-5">   TruHealers Healthcare extend its services to people from all countries across the globe. The International Patient Services department offers 24*7 customized services and personal attention to international patients. Patient centricity is at the heart of everything we do .</p>
+
+               
+                
+
+            <div class="row g-3">
+                <!-- Medical & Non-Medical Services Boxes -->
+                <div class="col-12">
+                    <div class="row">
+                        <!-- Box Template -->
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-calendar-check"></i></div>
+                                <p class="quote-title">Medical opinion and appointments prior to travel</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-user-clock"></i></div>
+                                <p class="quote-title">Appointment Scheduling</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-language"></i></div>
+                                <p class="quote-title">Free Language Interpreter Services</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-notes-medical"></i></div>
+                                <p class="quote-title">Post Treatment follow-up</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-car"></i></div>
+                                <p class="quote-title">10-30 minutes’ drive from International Airport</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-wifi"></i></div>
+                                <p class="quote-title">Internet & Newspapers in the Room</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-file-medical"></i></div>
+                                <p class="quote-title">Treatment packages in Advance</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-stethoscope"></i></div>
+                                <p class="quote-title">Pre-Treatment/Second opinion</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-video"></i></div>
+                                <p class="quote-title">Video Conference with the Doctor</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-ambulance"></i></div>
+                                <p class="quote-title">Ambulance Pick-up from Airport*</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-shuttle-van"></i></div>
+                                <p class="quote-title">Airport Pick-n-drop facility*</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-subway"></i></div>
+                                <p class="quote-title">5 minutes from nearest metro station</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                <p class="quote-title">Guided Tour*</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-passport"></i></div>
+                                <p class="quote-title">Visa Assistance</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-concierge-bell"></i></div>
+                                <p class="quote-title">Concierge Services for Dining</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-hotel"></i></div>
+                                <p class="quote-title">Hotel Reservations (budget to 5-star)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-hotel"></i></div>
+                                <p class="quote-title">•	For all your Medical & Non-Medical needs our dedicated executives will assist you during your entire stay with us</p>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 mb-3">
+                            <div class="quote-card">
+                                <div class="quote-icon"><i class="fas fa-user-friends"></i></div>
+                                <p class="quote-title">Dedicated assistance for all Medical & Non-Medical needs</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            
+                <!-- Existing Quote Cards -->
+                <!-- <div class="col-md-3 col-sm-6">
+                    <div class="quote-card">
+                        <div class="quote-icon"><i class="fas fa-walking"></i></div>
+                        <div>
+                            <p class="quote-title">Knee Replacement</p>
+                            <p class="quote-price">Starting <strong>$4000</strong></p>
+                            <p class="get-quote">Get Quote</p>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- ... keep your other quote cards unchanged ... -->
+            </div>
+
+            <!-- Footer CTA -->
+            <div class="quote-footer mt-4">
+                <p>Discover what we offer!</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-danger"><i class="fas fa-file-signature me-2"></i>Get Quote</button>
+                    <button class="btn btn-success"><i class="fab fa-whatsapp me-2"></i>Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&& -->
+    <section class="video-testimonials py-5">
+        <div class="container text-center">
+          <h6 class="text-uppercase" style="color: #009bb0; font-weight: bold;">Patient Stories</h6>
+          <h2 class="fw-bold mb-3" style="color: #00414c;">Success Stories</h2>
+          <div class="mb-4">
+            <span class="d-inline-block bg-danger rounded-circle p-3">
+              <i class="fas fa-play text-white"></i>
+            </span>
+          </div>
+      
+          <div class="row g-4 justify-content-center">
+            <!-- Video Testimonial Card -->
+            <div class="col-md-4 col-lg-4">
+              <div class="card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+                <div class="position-relative">
+                  <img src="asserts/images/img1.png" class="img-fluid w-100" alt="Video thumbnail">
+                  <div class="position-absolute top-50 start-50 translate-middle">
+                    <span class="bg-danger rounded-circle p-3">
+                      <i class="fas fa-play text-white"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="p-3 text-start">
+                  <h5 class="mb-1 text-dark fw-bold">Mr. Dhuli Chand</h5>
+                  <p class="mb-0 text-muted">Unable To Move</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-4 col-lg-4">
+              <div class="card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+                <div class="position-relative">
+                  <img src="asserts/images/img3.png" class="img-fluid w-100" alt="Video thumbnail">
+                  <div class="position-absolute top-50 start-50 translate-middle">
+                    <span class="bg-danger rounded-circle p-3">
+                      <i class="fas fa-play text-white"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="p-3 text-start">
+                  <h5 class="mb-1 text-dark fw-bold">Mr. Khatwani</h5>
+                  <p class="mb-0 text-muted">Couldn't Speak</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-4 col-lg-4">
+              <div class="card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+                <div class="position-relative">
+                  <img src="asserts/images/img5.png" class="img-fluid w-100" alt="Video thumbnail">
+                  <div class="position-absolute top-50 start-50 translate-middle">
+                    <span class="bg-danger rounded-circle p-3">
+                      <i class="fas fa-play text-white"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="p-3 text-start">
+                  <h5 class="mb-1 text-dark fw-bold">Ms. Kamla Aggarwal</h5>
+                  <p class="mb-0 text-muted">Tumour</p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+<!-- ******************************** -->
+
+    <div class="container faq-section">
+        <h2 class="faq-title">Frequently Asked Questions (FAQ’s)</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="accordion" id="accordionLeft">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                What is medical tourism, and why do people travel abroad for medical treatments?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionLeft">
+                            <div class="accordion-body">
+                                Medical tourism is a global phenomenon whereby patients travel abroad looking for
+                                medical treatment...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                What is Vaidam.com, and how does it work?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+                            <div class="accordion-body">
+                                Vaidam.com helps patients connect with top hospitals and doctors globally...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                How can I verify the credentials and reputation of a foreign hospital or doctor?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+                            <div class="accordion-body">
+                                You can verify through online reviews, accreditations like JCI, and patient
+                                testimonials...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="accordion" id="accordionRight">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                What are the visa and travel requirements for medical tourism in different countries?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+                            <div class="accordion-body">
+                                Visa requirements vary by country. Many countries offer medical visas with simplified
+                                procedures...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                What is the process to book a consultation with a specialist through Vaidam.com?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+                            <div class="accordion-body">
+                                You can contact Vaidam through their website, submit medical reports, and they will
+                                arrange a consultation...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6">
+                                Are there any fees associated with using Vaidam.com’s services?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+                            <div class="accordion-body">
+                                Most services offered by Vaidam.com are free for patients, as the company is funded by
+                                partner hospitals...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CTA section  -->
+
+    <div class="">
+        <section class="tru-cta-section">
+            <div class="tru-cta-pattern">
+                <div class="tru-cta-circle tru-cta-circle-1"></div>
+                <div class="tru-cta-circle tru-cta-circle-2"></div>
+                <div class="tru-cta-circle tru-cta-circle-3"></div>
+                <div class="tru-cta-circle tru-cta-circle-4"></div>
+            </div>
+    
+            <div class="container">
+                <div class="tru-cta-content">
+                    <h2 class="tru-cta-title">Let's Get In Touch.</h2>
+                    <p class="tru-cta-text">Our healthcare advisors are ready to assist you. We're committed to making your medical journey as smooth as possible.</p>
+    
+                    <div class="tru-cta-buttons">
+                        <a href="#" class="tru-cta-btn">
+                            Book a Consultation
+                            <span class="tru-cta-btn-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+    
+                        <a href="#" class="tru-cta-btn tru-cta-btn-secondary">
+                            Get Free Quote
+                            <span class="tru-cta-btn-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us - TruHealers Healthcare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4eb8dd;
+            --primary-dark: #0077b6;
+            --secondary-color: #a1d9f5;
+            --accent-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --heading-color: #005a87;
+            --icon-color: #003d5b;
+            --hover-color: #e8f7fd;
+            --card-border: #cfe8f7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: #f9fdff;
+        }
+
+        .truhealers-section {
+            padding: 70px 0;
+            background-color: #f0f8ff;
+            position: relative;
+        }
+
+        .truhealers-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(161, 217, 245, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(30%, -30%);
+        }
+
+        .truhealers-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(161, 217, 245, 0.15);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-30%, 30%);
+        }
+
+        .truhealers-heading {
+            color: var(--heading-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2.3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .truhealers-heading-wrapper {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .truhealers-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .truhealers-subtitle {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .truhealers-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px 25px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--card-border);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .truhealers-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary-dark);
+            transition: height 0.3s ease;
+        }
+
+        .truhealers-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            background-color: var(--hover-color);
+        }
+
+        .truhealers-card:hover::before {
+            height: 100%;
+        }
+
+        .truhealers-icon {
+            font-size: 2.2rem;
+            color: var(--icon-color);
+            margin-bottom: 18px;
+            transition: all 0.3s ease;
+            background-color: rgba(161, 217, 245, 0.2);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .truhealers-card:hover .truhealers-icon {
+            transform: scale(1.1);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .truhealers-title {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .truhealers-card:hover .truhealers-title {
+            color: var(--primary-dark);
+        }
+
+        .truhealers-content {
+            color: var(--text-color);
+            opacity: 0.9;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .truhealers-row {
+            margin-top: 20px;
+            row-gap: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Why Choose Us Section -->
+<section class="truhealers-section">
+    <div class="container">
+        <div class="truhealers-heading-wrapper">
+            <h2 class="truhealers-heading">Why Chose Us</h2>
+        </div>
+        
+        <p class="truhealers-subtitle">TruHealers Healthcare is known for its commitment to providing high-quality, affordable healthcare and for its focus on patient-centric care</p>
+        
+        <div class="row truhealers-row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h5 class="truhealers-title">World-Class Healthcare</h5>
+                    <p class="truhealers-content">Access to top hospitals and internationally accredited medical facilities.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h5 class="truhealers-title">Affordable Treatments</h5>
+                    <p class="truhealers-content">High-quality care at a fraction of the cost compared to Western countries.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-comments-dollar"></i>
+                    </div>
+                    <h5 class="truhealers-title">Free Medical Advice and Quote</h5>
+                    <p class="truhealers-content">We offer free consultation with doctor for your healthcare needs.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h5 class="truhealers-title">Experienced Medical Professionals</h5>
+                    <p class="truhealers-content">Skilled doctors with expertise in various specialties.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h5 class="truhealers-title">Personalized Care</h5>
+                    <p class="truhealers-content">Tailored treatment plans to meet your unique needs.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h5 class="truhealers-title">Seamless Experience</h5>
+                    <p class="truhealers-content">End-to-end support from consultation to recovery, with easy coordination.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h5 class="truhealers-title">Patient-Centered Approach</h5>
+                    <p class="truhealers-content">Focus on safety, transparency, and patient satisfaction.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="truhealers-card">
+                    <div class="truhealers-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5 class="truhealers-title">Trusted Partner</h5>
+                    <p class="truhealers-content">We ensure hassle-free healthcare, so you can focus on healing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

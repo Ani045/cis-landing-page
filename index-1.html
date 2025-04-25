@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruHealers Healthcare</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4eb8dd;
+            --secondary-color: #a1d9f5;
+            --accent-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --light-gray: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #ffffff;
+        }
+        
+        .why-choose-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .feature-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background-color: white;
+            border: none;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .icon-box {
+            background-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        .feature-card:hover .icon-box i {
+            color: white;
+        }
+        
+        .icon-box i {
+            font-size: 32px;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .card-body {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-title {
+            color: var(--primary-color);
+        }
+        
+        .feature-text {
+            color: #6c757d;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .top-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .navbar-brand span {
+            color: var(--text-color);
+        }
+        
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .feature-card {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner">
+        <div class="container">
+            <p class="mb-0">Free Medical Consultation & Quote Available 24/7</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tru<span>Healers</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#">Get Free Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    
+
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p class="text-muted">TruHealers Healthcare is known for its commitment to providing high-quality, affordable healthcare and for its focus on patient-centric care</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h3 class="feature-title">World-Class Healthcare</h3>
+                            <p class="feature-text">Access to top hospitals and internationally accredited medical facilities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3 class="feature-title">Affordable Treatments</h3>
+                            <p class="feature-text">High-quality care at a fraction of the cost compared to Western countries.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-comment-medical"></i>
+                            </div>
+                            <h3 class="feature-title">Free Medical Advice</h3>
+                            <p class="feature-text">We offer free consultation with doctors to discuss your medical needs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="feature-title">Experienced Professionals</h3>
+                            <p class="feature-text">Skilled doctors with expertise in various medical specialties.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h3 class="feature-title">Personalized Care</h3>
+                            <p class="feature-text">Tailored treatment plans to meet your unique health needs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3 class="feature-title">Seamless Experience</h3>
+                            <p class="feature-text">End-to-end support from consultation to recovery, with easy coordination.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="feature-title">Patient-Centered</h3>
+                            <p class="feature-text">Focus on safety, transparency, and patient satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="feature-title">Trusted Partner</h3>
+                            <p class="feature-text">We ensure hassle-free healthcare, so you can focus on healing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary btn-lg">Get Your Free Consultation Today</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
