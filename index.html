@@ -1651,6 +1651,155 @@
       .is-invalid {
         animation: shake 0.4s ease-in-out;
       }
+      .logo-showcase {
+            padding: 80px 0;
+            /* background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%); */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-showcase::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+        }
+
+        .logo-showcase__heading {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+        }
+
+        .logo-showcase__heading h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+
+        .logo-showcase__heading p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        .logo-showcase__heading::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        .logo-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        .logo-slider__container {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            width: calc(250px * 12);
+        }
+
+        .logo-slider__item {
+            width: 250px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .logo-slider__item:hover {
+            transform: scale(1.1);
+            filter: none !important;
+        }
+
+        .logo-slider__image {
+            max-width: 100%;
+            max-height: 80px;
+            /* filter: grayscale(100%) opacity(0.7); */
+            transition: all 0.3s ease;
+        }
+
+        .logo-slider__item:hover .logo-slider__image {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 6));
+            }
+        }
+
+        /* Overlay gradients to create fade effect */
+        .logo-slider::before,
+        .logo-slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .logo-slider::before {
+            left: 0;
+            background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+        }
+
+        .logo-slider::after {
+            right: 0;
+            background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo-showcase {
+                padding: 50px 0;
+            }
+            
+            .logo-showcase__heading h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-slider__container {
+                width: calc(200px * 12);
+            }
+            
+            .logo-slider__item {
+                width: 200px;
+                height: 120px;
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-200px * 6));
+                }
+            }
+        }
+
     </style>
   </head>
 
@@ -1955,6 +2104,61 @@
       </section> -->
 
     <!-- para -->
+
+    <section class="logo-showcase pt-5 pb-0">
+      <div class="container">
+        <div class="truhealers-heading-wrapper">
+          <h2 class="truhealers-heading mb-3" style="margin-bottom: 10px">
+           Our Partners
+          </h2>
+        </div>
+          
+          <div class="logo-slider">
+              <div class="logo-slider__container">
+                  <!-- Logos (first set) -->
+                  <div class="logo-slider__item">
+                      <img src="asserts/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                      <img src="asserts/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                      <img src="asserts/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                      <img src="asserts/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                    <img src="asserts/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                </div>
+                <div class="logo-slider__item">
+                    <img src="asserts/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                </div>
+                <div class="logo-slider__item">
+                    <img src="asserts/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+                </div>
+                <div class="logo-slider__item">
+                    <img src="asserts/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
+                </div>
+                <div class="logo-slider__item">
+                  <img src="asserts/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+              </div>
+              <div class="logo-slider__item">
+                  <img src="asserts/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+              </div>
+              <div class="logo-slider__item">
+                  <img src="asserts/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+              </div>
+              <div class="logo-slider__item">
+                  <img src="asserts/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
+              </div>
+                  
+                 
+              </div>
+          </div>
+      </div>
+  </section>
+
 
     <section class="th-treatment-about">
       <div class="container">
@@ -2747,7 +2951,7 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq2"
                 >
-                  What is Vaidam.com, and how does it work?
+                    how does it work?
                 </button>
               </h2>
               <div
@@ -2756,7 +2960,7 @@
                 data-bs-parent="#accordionLeft"
               >
                 <div class="accordion-body">
-                  Vaidam.com helps patients connect with top hospitals and
+                  TruHealers Healthcare helps patients connect with top hospitals and
                   doctors globally...
                 </div>
               </div>
@@ -2821,8 +3025,8 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq5"
                 >
-                  What is the process to book a consultation with a specialist
-                  through Vaidam.com?
+                  What is the process to book a consultation ?
+                 
                 </button>
               </h2>
               <div
@@ -2831,7 +3035,7 @@
                 data-bs-parent="#accordionRight"
               >
                 <div class="accordion-body">
-                  You can contact Vaidam through their website, submit medical
+                  You can contact TruHealers Healthcare through their website, submit medical
                   reports, and they will arrange a consultation...
                 </div>
               </div>
@@ -2845,7 +3049,7 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq6"
                 >
-                  Are there any fees associated with using Vaidam.com’s
+                  Are there any fees associated with using TruHealers Healthcare 
                   services?
                 </button>
               </h2>
@@ -2855,7 +3059,7 @@
                 data-bs-parent="#accordionRight"
               >
                 <div class="accordion-body">
-                  Most services offered by Vaidam.com are free for patients, as
+                  Most services offered by TruHealers Healthcare  are free for patients, as
                   the company is funded by partner hospitals...
                 </div>
               </div>
