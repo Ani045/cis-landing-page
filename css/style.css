@@ -28,7 +28,7 @@ body {
 }
 
 .appointment-btn {
-  background-color: var(--primary-color);
+  background-color:#005388;
   color: #fff;
   padding: 0.6rem 1.5rem;
   border-radius: 30px;
