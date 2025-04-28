@@ -53,7 +53,7 @@
       /* ++++++++++++++++++++++++++++++ */
 
       .navbar-custom {
-        background-color: #c6e8fa;
+        background-color: #fff;
         padding: 10px 20px;
         display: flex;
         align-items: center;
@@ -2156,7 +2156,7 @@
             placeholder="Describe The Current Medical Problem .."
           ></textarea>
 
-          <button type="submit" class="submit-btn">Get FREE Appointment</button>
+          <button type="submit" class="submit-btn" >Get FREE Appointment</button>
           <p class="text-center mt-2" style="font-size: 0.8rem">
             By submitting the form I agree to the
             <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> of
@@ -2290,7 +2290,8 @@
               healing with peace of mind.
             </p>
             <div class="text-center">
-              <a href="#" class="th-treatment-btn">Book a Consultation</a>
+              <a href="#" data-bs-toggle="modal"
+              data-bs-target="#artemisHealthModal" class="th-treatment-btn">Book a Consultation</a>
             </div>
           </div>
         </div>
@@ -2835,8 +2836,9 @@
         <div class="quote-footer mt-4">
           <p style="color: #4eb8dd">Discover what we offer!</p>
           <div class="d-flex justify-content-center gap-3">
-            <button class="btn btn-danger">
-              <i class="fas fa-file-signature me-2"></i>Get Appointment
+            <button class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#artemisHealthModal">
+              <i class="fas fa-file-signature me-2"></i>Book Now
             </button>
             <button class="btn btn-success">
               <i class="fab fa-whatsapp me-2"></i>Chat
@@ -3189,7 +3191,8 @@
             </p>
 
             <div class="tru-cta-buttons">
-              <a href="#" class="tru-cta-btn">
+              <a href="#" class="tru-cta-btn" data-bs-toggle="modal"
+              data-bs-target="#artemisHealthModal">
                 Book a Consultation
                 <span class="tru-cta-btn-icon">
                   <i class="fas fa-arrow-right"></i>
